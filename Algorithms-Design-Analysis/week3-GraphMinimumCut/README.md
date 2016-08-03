@@ -1,7 +1,7 @@
 <h2> The question was basically using a randomisation contraction algorithm to find a minimum nubmer of cuts in a given graph. (200 vertices) </h2>
 
-<h3>
-How I approached this probelm? 
+<h4>
+How I approached this probelm? <br><br>
 
 1. I implemented adjacency list in Java using hashmap<Integer,Integer[]> . Key : vertex , Value : vertecies that are connected to the key. <br>
 2. I implemented Karger's algorithm. It is a randomisation contraction algorithm. I will explain detail below. <br>
@@ -20,10 +20,10 @@ I used a double for loop to check all the values if that value matching with cor
 1000. I didnt want to bother to remove elements from array at that time.. <br>
 <br>
 Then, repeat this a large number of times, since a probabilty of not finding the minimum from n repetition is 1/n. 
+</h4>
+<br><br>
+Question. 
 
-</h3>
-
-<QS>
 Your task is to code up and run the randomized contraction algorithm for the min cut problem and use it on the above graph 
 to compute the min cut. (HINT: Note that you'll have to figure out an implementation of edge contractions. 
 Initially, you might want to do this naively, creating a new graph from the old every time there's an edge contraction.
