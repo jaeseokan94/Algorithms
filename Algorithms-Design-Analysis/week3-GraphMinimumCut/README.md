@@ -1,26 +1,24 @@
-< h2> The question was basically using a randomisation contraction algorithm to find a minimum nubmer of cuts in a given graph. (200 vertices) 
-
-</h2>
+<h2> The question was basically using a randomisation contraction algorithm to find a minimum nubmer of cuts in a given graph. (200 vertices) </h2>
 
 <h3>
 How I approached this probelm? 
 
-1. I implemented adjacency list in Java using hashmap<Integer,Integer[]> . Key : vertex , Value : vertecies that are connected to the key. 
-2. I implemented Karger's algorithm. It is a randomisation contraction algorithm. I will explain detail below. 
-3. There are 3 main steps in this algorith.  First, randomly choose one edge. (u,v) Second, merge (u,v) into one vertex. Third, Remove self-loops
+1. I implemented adjacency list in Java using hashmap<Integer,Integer[]> . Key : vertex , Value : vertecies that are connected to the key. <br>
+2. I implemented Karger's algorithm. It is a randomisation contraction algorithm. I will explain detail below. <br>
+3. There are 3 main steps in this algorith.  First, randomly choose one edge. (u,v) Second, merge (u,v) into one vertex. Third, Remove self-loops <br>
 
-- randomly choosing one edge 
-I first randomly choosed a key from a hashmap I implemented, and that key denotes one of the vertex in the graph. code : keys.get( r.nextInt(keys.size()) )
-And then, randomly choose an element from an array of corresponding value. 
+- randomly choosing one edge  <br>
+I first randomly choosed a key from a hashmap I implemented, and that key denotes one of the vertex in the graph. code : keys.get( r.nextInt(keys.size()) ) <br>
+And then, randomly choose an element from an array of corresponding value. <br>
 
-- merge 
-This was the easiest part. Merge two arrays. It could have been easier and more effective if I used a list to store values. 
+- merge <br>
+This was the easiest part. Merge two arrays. It could have been easier and more effective if I used a list to store values. <br>
 
-- remove self loop 
-My code is a little bit messy and it is not the best way, but I solved a problem. 
-I used a double for loop to check all the values if that value matching with corresponding key. If key == value, value changed to
-1000. I didnt want to bother to remove elements from array at that time.. 
-
+- remove self loop <br>
+My code is a little bit messy and it is not the best way, but I solved a problem. <br>
+I used a double for loop to check all the values if that value matching with corresponding key. If key == value, value changed to<br>
+1000. I didnt want to bother to remove elements from array at that time.. <br>
+<br>
 Then, repeat this a large number of times, since a probabilty of not finding the minimum from n repetition is 1/n. 
 
 </h3>
