@@ -8,7 +8,7 @@ How I approached this probelm? <br><br>
 3. There are 3 main steps in this algorith.  First, randomly choose one edge. (u,v) Second, merge (u,v) into one vertex. Third, Remove self-loops <br>
 
 - randomly choosing one edge  <br>
-I first randomly choosed a key from a hashmap I implemented, and that key denotes one of the vertex in the graph. code : keys.get( r.nextInt(keys.size()) ) <br>
+Frist, randomly choose a key from a hashmap I implemented, and that key denotes one of the vertices in the graph. code : keys.get( r.nextInt(keys.size()) ) <br>
 And then, randomly choose an element from an array of corresponding value. <br>
 
 - merge <br>
