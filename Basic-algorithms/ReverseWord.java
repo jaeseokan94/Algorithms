@@ -5,10 +5,13 @@ import java.util.*;
 /*
  * create a method to reverse the words of a string.
  * i.e., "Hello World" => "World Hello"
+ 
+ Additional method for reversing String.
+ 
  */
 
 public class ReverseWord {
-
+    
 	public static String reverseWord(char[] a){
 		String ans = "";
 		Stack<String> stack = new Stack();
@@ -34,6 +37,27 @@ public class ReverseWord {
 		}
 		
 		return ans;
+	}
+    
+    // reversing a string method using String
+	public static String useString(String s){
+		
+		String reverse = "";
+		
+		for(int i = 0 ; i < s.length() ; i ++ ){
+			reverse=reverse+s.charAt(s.length()-i-1);
+		} // you have to make a whole copy of String everytime you add new character, so it takes more time. 
+		
+		return reverse;
+	}
+	    // reversing a string method using StringBuilder
+	public static String useStringBuilder(String s){
+		StringBuilder reverse = new StringBuilder();
+		
+		for(int i = 0 ; i < s.length() ; i ++ ){
+			reverse.append(s.length()-i-1);
+		} 
+		return reverse.toString();
 	}
 	
 	public static void main(String[] args) {
