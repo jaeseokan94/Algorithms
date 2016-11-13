@@ -4,6 +4,11 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+/*
+Consider an undirected graph consisting of  nodes where each node is labeled from  to  and the edge between any two nodes is always of length . We define node  to be the starting position for a BFS.
+https://www.hackerrank.com/challenges/ctci-bfs-shortest-reach
+*/
+
 public class Solution {
     
     public static class Graph {
